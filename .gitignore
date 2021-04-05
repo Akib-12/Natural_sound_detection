@@ -1,4 +1,5 @@
 dataset.json
+model.h5
 .idea
 audio
 .vscode
