@@ -1,7 +1,6 @@
 #%%
 import librosa
 import librosa.display
-import matplotlib.pyplot as plt
 import pandas as pd
 import json
 
@@ -9,12 +8,7 @@ import json
 #%%
 def get_mfcc(filepath):
     signal, sr = librosa.load(filepath, sr=None)
-    # plt.figure(figsize=(14, 5))
-    # librosa.display.waveplot(signal, sr=sr)
-    # print(signal)
-    mfcc = librosa.feature.mfcc(signal, sr=sr)
-    # plt.plot(mfcc)
-    return mfcc.tolist()
+    return librosa.feature.mfcc(signal, sr=sr).tolist()
 
 
 #%%
