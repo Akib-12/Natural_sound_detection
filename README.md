@@ -1,2 +1,2 @@
-# audio_detection
-We want to detect the audio using MFCC and ML
+# Audio Detection
+Classifying Urban Sounds using MFCC and ML
