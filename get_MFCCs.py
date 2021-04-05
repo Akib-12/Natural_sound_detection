@@ -14,7 +14,7 @@ def get_mfcc(filepath):
 #%%
 extracted_feature_mfcc = []
 
-df = pd.read_csv('dataset.csv')
+df = pd.read_csv('dataset_all.csv')
 for row in df.itertuples():
     filepath = 'audio/' + row.filename
     mfcc = get_mfcc(filepath)
@@ -30,7 +30,7 @@ for row in df.itertuples():
 # print(extracted_feature_mfcc)
 
 #%%
-with open('dataset.json', 'w') as f:
+with open('dataset_all.json', 'w') as f:
     json.dump(extracted_feature_mfcc, f)
 
 # %%
